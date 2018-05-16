@@ -1,6 +1,5 @@
 node_modules
-dist/
-test/coverage-jest/
+test
 example
 .vscode
 .idea
