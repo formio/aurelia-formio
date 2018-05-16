@@ -1,0 +1,5 @@
+node_modules
+dist/
+test/coverage-jest/
+.vscode
+.idea

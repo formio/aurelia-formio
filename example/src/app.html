@@ -1,0 +1,79 @@
+<template>
+  <style type="text/css">
+    #select-form .formio-form {
+      min-height: 0px;
+    }
+  </style>
+  <div class="jumbotron" style="padding-top: 20px; padding-bottom: 10px;">
+    <div class="container text-center">
+      <p><img src="https://www.valuecoders.com/blog/wp-content/uploads/2016/11/aurelia-js-logo.png" /></p>
+      <h1>Form <a href="https://github.com/formio/aurelia-formio" target="_blank">Builder</a> & <a href="https://github.com/formio/aurelia-formio" target="_blank">Renderer</a></h1>
+      <p><strong>Open Source</strong> by <a target="_blank" href="https://form.io"><img src="https://help.form.io/assets/formio-logo.png" /></a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <h3 class="text-center text-muted">The <a href="https://github.com/formio/aurelia-formio" target="_blank">Form Builder</a> allows you to build a <formio form.bind="selectForm" change.delegate="displayChanged($event)" style="display: inline-block;" id="select-form"></formio></h3>
+      <pre class="text-center"><code>&lt;form-builder change.delegate="formChanged($event)"&gt;&lt;/form-builder&gt;</code></pre>
+      <form-builder form.bind="builderForm" change.delegate="formChanged($event)"></form-builder>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-center text-muted">as JSON Schema</h3>
+      <div class="well jsonviewer">
+        <pre ref="json"></pre>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h3 class="text-center text-muted">which <a href="https://github.com/formio/aurelia-formio" target="_blank">Renders as a Form</a> in your Application</h3>
+      <pre class="text-center"><code>&lt;formio form.bind="form" change.delegate="submissionChanged($event)"&gt;&lt;/formio&gt;</code></pre>
+      <div class="well">
+        <formio form.bind="form" change.delegate="submissionChanged($event)"></formio>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h3 class="text-center text-muted">which creates a Submission JSON</h3>
+      <div class="well jsonviewer">
+        <pre ref="subjson"></pre>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1 text-center">
+      <h3 class="text-center text-muted">which submits to our API Platform</h3>
+      <p>hosted or on-premise</p>
+      <a href="https://form.io" target="_blank"><img style="width:100%" src="https://help.form.io/assets/img/formioapi2.png" /></a>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 40px;">
+    <div class="col-sm-12 text-center">
+      <a href="https://form.io" target="_blank" class="btn btn-lg btn-success">Get Started</a>
+    </div>
+  </div>
+  <div class="row well" style="margin-top: 50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">We are Open Source!</h2>
+          <h3 class="section-subheading text-muted">We are proud to offer our core Form &amp; API platform as Open Source.</h3>
+          <h3 class="section-subheading text-muted">Find us on GitHub @ <a href="https://github.com/formio/aurelia-formio" target="_blank">https://github.com/formio/aurelia-formio</a></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><a href="https://github.com/formio/formio" target="_blank"><img class="img-responsive" src="https://form.io/assets/images/github-logo.png"></a></div>
+        <div class="col-md-8">
+          <p>Getting started is as easy as...</p>
+          <pre style="background-color: white;">git clone https://github.com/formio/formio.git
+cd formio
+npm install
+node server</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
