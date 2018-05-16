@@ -100,7 +100,7 @@ module.exports = ({production, server, extractCss, coverage, analyze} = {}) => (
       } : undefined,
       metadata: {
         // available in index.ejs //
-        title, server, baseUrl
+        title, server, baseUrl: production ? '/aurelia-formio/' : baseUrl
       }
     }),
     ...when(extractCss, new ExtractTextPlugin({
