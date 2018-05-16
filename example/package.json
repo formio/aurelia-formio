@@ -109,7 +109,9 @@
   },
   "scripts": {
     "start": "nps",
-    "test": "nps test"
+    "test": "nps test",
+    "build": "nps build",
+    "gh-pages": "nps build;cd dist;git init;git remote add origin https://github.com/formio/aurelia-formio.git;git checkout -b gh-pages;git add -A;git commit -m 'Pages Build';git push origin gh-pages -f;"
   },
   "main": "dist/app.bundle.js"
 }
