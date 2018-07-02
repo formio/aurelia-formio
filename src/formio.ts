@@ -27,7 +27,7 @@ export class FormRenderer {
     }
 
     attached() {
-        this.renderForm();
+        this.buildForm();
     }
 
     emit(name: string, data: object) {
@@ -41,10 +41,9 @@ export class FormRenderer {
         return Object.keys(this.submission).length === 0 && this.submission.constructor === Object;
     }
 
-    renderForm() {
+    buildForm() {
         if (this.formio) {
             (new Form(this.formio, this.src || this.form, this.options))
-                .render()
                 .then((instance: any) => {
                     this.instance = instance;
                     if (this.hasSubmission()) {
@@ -66,11 +65,11 @@ export class FormRenderer {
     }
 
     srcChanged() {
-        this.renderForm();
+        this.buildForm();
     }
 
     formChanged() {
-        this.renderForm();
+        this.buildForm();
     }
 
     submissionChanged(submission: any) {
@@ -80,6 +79,6 @@ export class FormRenderer {
     }
 
     optionsChanged() {
-        this.renderForm();
+        this.buildForm();
     }
 }
