@@ -31,10 +31,9 @@ export class FormRenderer {
     }));
   }
 
-  renderBuilder() {
+  buildBuilder() {
     if (this.builder) {
       (new FormBuilder(this.builder, this.form, this.options))
-        .render()
         .then((instance: any) => {
           this.instance = instance;
           this.instance.off('deleteComponent');
@@ -48,14 +47,14 @@ export class FormRenderer {
   }
 
   attached() {
-    this.renderBuilder();
+    this.buildBuilder();
   }
 
   optionsChanged() {
-    this.renderBuilder();
+    this.buildBuilder();
   }
 
   formChanged() {
-    this.renderBuilder();
+    this.buildBuilder();
   }
 }
