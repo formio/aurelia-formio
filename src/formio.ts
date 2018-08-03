@@ -15,6 +15,9 @@ export class FormRenderer {
   private src: string = '';
 
   @bindable
+  private url: string = '';
+
+  @bindable
   private form: object = {};
 
   @bindable
@@ -50,6 +53,10 @@ export class FormRenderer {
           if (this.hasSubmission()) {
             this.instance.submission = this.submission;
           }
+          // If form is an object and url is set, set it as well.
+          if (this.form && this.url) {
+            this.instance.url = this.url;
+          }
           this.instance.off('change');
           this.instance.off('formLoad');
           this.instance.off('render');
@@ -66,6 +73,10 @@ export class FormRenderer {
   }
 
   srcChanged() {
+    this.buildForm();
+  }
+
+  urlChanged() {
     this.buildForm();
   }
 
