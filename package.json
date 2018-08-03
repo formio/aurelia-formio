@@ -1,6 +1,6 @@
 {
   "name": "aurelia-formio",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Form.io renderer and builder for Aurelia.",
   "keywords": [
     "formio",
