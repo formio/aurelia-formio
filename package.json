@@ -1,6 +1,6 @@
 {
   "name": "aurelia-formio",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.4",
   "description": "Form.io renderer and builder for Aurelia.",
   "keywords": [
     "formio",
@@ -99,7 +99,7 @@
     "aurelia-task-queue": "^1.2.1",
     "aurelia-templating": "^1.6.0",
     "aurelia-templating-binding": "^1.4.0",
-    "formiojs": "^4.0.0-alpha.3"
+    "formiojs": "^4.0.0-alpha.9"
   },
   "devDependencies": {
     "@types/jest": "^21.1.5",
@@ -117,7 +117,7 @@
     "jest": "^21.2.1",
     "jest-css-modules": "^1.1.0",
     "lodash": "^4.17.10",
-    "node-sass": "^4.6.0",
+    "node-sass": "^4.11.0",
     "rimraf": "^2.6.2",
     "semantic-release": "^8.2.0",
     "ts-jest": "^21.2.1",
