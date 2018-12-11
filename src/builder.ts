@@ -33,7 +33,7 @@ export class FormRenderer {
 
   buildBuilder() {
     if (this.builder) {
-      (new FormBuilder(this.builder, this.form, this.options))
+      (new FormBuilder(this.builder, this.form, this.options)).ready
         .then((instance: any) => {
           this.instance = instance;
           this.instance.off('deleteComponent');

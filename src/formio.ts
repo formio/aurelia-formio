@@ -44,7 +44,7 @@ export class FormRenderer {
 
   buildForm() {
     if (this.formio) {
-      (new Form(this.formio, this.src || this.form, this.options))
+      (new Form(this.formio, this.src || this.form, this.options)).ready
         .then((instance: any) => {
           this.instance = instance;
           if (this.hasSubmission()) {
