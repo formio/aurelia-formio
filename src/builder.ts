@@ -1,8 +1,9 @@
 import { inject } from 'aurelia-dependency-injection';
 import { bindable } from 'aurelia-framework';
 import { customElement } from 'aurelia-templating';
-
-const FormBuilder = require('formiojs').FormBuilder;
+// @ts-ignore
+import { FormBuilder } from 'formiojs';
+// const FormBuilder = require('formiojs').FormBuilder;
 
 @customElement('form-builder')
 @inject(Element)

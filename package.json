@@ -1,6 +1,6 @@
 {
   "name": "aurelia-formio",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Form.io renderer and builder for Aurelia.",
   "keywords": [
     "formio",
@@ -87,7 +87,7 @@
     "dependencies": {}
   },
   "dependencies": {
-    "aurelia-binding": "^1.5.0",
+    "aurelia-binding": "^1.7.3",
     "aurelia-dependency-injection": "^1.3.2",
     "aurelia-event-aggregator": "^1.0.1",
     "aurelia-framework": "^1.1.5",

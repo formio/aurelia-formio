@@ -1,8 +1,9 @@
 import { inject } from 'aurelia-dependency-injection';
 import { bindable } from 'aurelia-framework';
 import { customElement } from 'aurelia-templating';
-
-const Form = require('formiojs').Form;
+// @ts-ignore
+import { Form } from 'formiojs';
+// const Form = require('formiojs').Form;
 
 @customElement('formio')
 @inject(Element)
@@ -39,7 +40,7 @@ export class FormRenderer {
   }
 
   hasSubmission() {
-    return Object.keys(this.submission).length === 0 && this.submission.constructor === Object;
+    return Object.keys(this.submission).length !== 0 && this.submission.constructor === Object;
   }
 
   buildForm() {
